@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  config-server:
+    image: config-server:0.0.1
+    ports:
+      - "8082:8082"
+    networks:
+      backend:
+        aliases:
+          - "server-config"
+networks:
+  backend:
+    driver: bridge

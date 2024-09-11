@@ -10,3 +10,7 @@ spring:
           search-locations: classpath:/config
 server:
   port: 8082
+management:
+  endpoints:
+    web:
+      base-path: /
