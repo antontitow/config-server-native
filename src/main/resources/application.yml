@@ -10,7 +10,12 @@ spring:
           search-locations: classpath:/config
 server:
   port: 8082
+
+ #actuator
 management:
   endpoints:
     web:
       base-path: /
+  endpoint:
+    health:
+      show-details: always
