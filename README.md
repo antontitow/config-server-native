@@ -1,0 +1,1 @@
+docker build . --tag config-server:0.0.1

@@ -16,6 +16,9 @@ management:
   endpoints:
     web:
       base-path: /
+    enabled-by-default: false
   endpoint:
     health:
+      enabled: true
       show-details: always
+
