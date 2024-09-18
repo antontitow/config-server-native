@@ -14,9 +14,12 @@ server:
  #actuator
 management:
   endpoints:
+    enabled-by-default: true
     web:
-      base-path: /
-    enabled-by-default: false
+#      base-path: /
+      exposure:
+        include:
+          - '*'
   endpoint:
     health:
       enabled: true
