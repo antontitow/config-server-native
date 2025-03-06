@@ -84,6 +84,23 @@ services:
       backend:
         aliases:
           - "redis"
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./etc/prometheus:/etc/prometheus/
+    container_name: prometheus
+    hostname: prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
+    restart: unless-stopped
+    environment:
+      TZ: "Europe/Moscow"
+    networks:
+      backend:
+        aliases:
+          - "prometheus"
 networks:
   backend:
     driver: bridge
