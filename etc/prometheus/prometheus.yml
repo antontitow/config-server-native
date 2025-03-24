@@ -5,5 +5,5 @@ scrape_configs:
   - job_name: 'spring_micrometer'         # The job name is assigned to scraped metrics by default.
     metrics_path: '/actuator/prometheus'  # The HTTP resource path on which to fetch metrics from targets.
     scrape_interval: 5s                   # How frequently to scrape targets from this job.
-    static_configs:                       # A static_config allows specifying a list of targets and a common label set for them
-      - targets: ['192.168.0.101:8062']
+    static_configs: # A static_config allows specifying a list of targets and a common label set for them
+      - targets: [ '192.168.0.105:8061', '192.168.0.105:8062','192.168.0.105:8067' ]
